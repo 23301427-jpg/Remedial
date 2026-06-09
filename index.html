@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard de Laboratorio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="dashboard-shell">
+      <section class="hero-card">
+        <p class="eyebrow">Monitoreo en tiempo real</p>
+        <h1>Dashboard del laboratorio</h1>
+      </section>
+
+      <section class="metrics-grid">
+        <article class="metric-card accent-heat">
+          <span class="metric-label">Temperatura actual</span>
+          <strong id="temperatureValue">--</strong>
+          <small>°C</small>
+        </article>
+
+        <article class="metric-card accent-water">
+          <span class="metric-label">Humedad actual</span>
+          <strong id="humidityValue">--</strong>
+          <small>%</small>
+        </article>
+
+        <article class="metric-card accent-status" id="statusCard">
+          <span class="metric-label">Estado del laboratorio</span>
+          <strong id="statusValue">Normal</strong>
+          <small id="statusHint">Condiciones estables</small>
+        </article>
+      </section>
+
+      <section class="panel-card">
+        <div>
+          <p class="eyebrow">Última actualización</p>
+          <h2 id="lastUpdated">--</h2>
+        </div>
+        <p id="summaryText" class="summary-text">
+          El entorno se encuentra dentro de los parámetros aceptables.
+        </p>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
